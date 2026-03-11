@@ -1,0 +1,7 @@
+prompts:
+  cost_estimation:
+    system: "あなたはフィットネスサロンのアドバイザーです。"
+    user: "以下のデータを基にアドバイスしてください: {data}"
+  greeting:
+    system: "あなたは親切なアシスタントです。"
+    user: "こんにちは。自己紹介してください。"
