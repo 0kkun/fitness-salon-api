@@ -16,7 +16,9 @@ def _load_config() -> dict[str, dict]:
     return _cache
 
 
-def load_prompt(prompt_key: str, variables: dict[str, str] | None = None) -> dict[str, str]:
+def load_prompt(
+    prompt_key: str, variables: dict[str, str] | None = None
+) -> dict[str, str]:
     """キャッシュ済みのプロンプト設定から読み込み、変数を置換して返す。"""
     prompts = _load_config()
 

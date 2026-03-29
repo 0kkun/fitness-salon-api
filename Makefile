@@ -36,3 +36,14 @@ app: ## APIコンテナにシェルで入る
 	docker compose exec $(API_CONTAINER) sh
 test: ## テストを実行
 	docker compose exec $(API_CONTAINER) pytest tests/ -v
+
+
+# =============================
+# コード品質
+# =============================
+lint: ## Ruffでlintチェック
+	docker compose exec $(API_CONTAINER) ruff check .
+format: ## Ruffでフォーマット
+	docker compose exec $(API_CONTAINER) ruff format .
+lint-fix: ## Ruffでlint自動修正
+	docker compose exec $(API_CONTAINER) ruff check --fix .
