@@ -2,6 +2,9 @@ from pydantic import BaseModel, Field
 
 
 class ChatRequest(BaseModel):
+    provider: str = Field(
+        description="使用するAIプロバイダ (例: openai, gemini)",
+    )
     prompt_key: str = Field(
         description="config/prompts.yaml に定義されたプロンプトのキー名 (例: greeting, cost_estimation)",
     )

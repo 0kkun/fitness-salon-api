@@ -34,3 +34,5 @@ logs: ## コンテナのログを表示
 	docker compose logs -f $(API_CONTAINER)
 app: ## APIコンテナにシェルで入る
 	docker compose exec $(API_CONTAINER) sh
+test: ## テストを実行
+	docker compose exec $(API_CONTAINER) pytest tests/ -v
